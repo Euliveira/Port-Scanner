@@ -1,4 +1,3 @@
-GNU nano 6.2                                        meu_scanner.py                                        Modified
 import socket
 import os
 import time
