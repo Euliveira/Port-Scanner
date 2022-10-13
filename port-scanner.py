@@ -2,27 +2,27 @@ import socket
 import os
 import time
 
-time. sleep(3)
+time.sleep(1)
 os.system('clear')
 time.sleep(1)
+os.system('figlet Scanner')
+time.sleep(3)
 
 print("""
-●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 
-> BEM VINDO HA MAIS UMA EXCELENTE
-FERRAMENTA PORT-SCANNER
+《=====================Willian==================》
 
-> DESENVOLVIDO POR WILLIAN DE OLIVEIRA
+           CRIADOR: WILLIAN DE OLIVEIRA
 
-> 31/03/2022
+                 DATA:11/10/2022
 
-> PROIBIDO O MAU USO DA FERRAMENTA
+           PORTSCANNER - ETHICAL HACKER
 
-●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
+           CRIADO PARA FINS DIDATICOS
+
+《====================Willian===================》
 """)
-
-time.sleep(12)
-os.system('clear')
+time.sleep(7)
 
 time.sleep(1)
 os.system('clear')
@@ -52,17 +52,20 @@ AGUARDE
 time.sleep(2)
 os.system('clear')
 
-print('INICIANDO VARREDURA')
+IP = input('Digite o IP: ')
+Ports = [22,80,144,777,8080]
+print('22', '80', '144', '777', '8080')
 
-time.sleep(5)
-
-ports = [21,22,80,443,8080,8483]
-
-for port in ports:
+for port in Ports:
          client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-         client.settimeout(0.1)
-         code = client.connect_ex(("bancocn.com", port))
+         client.settimeout(1.0)
+         code = client.connect_ex((IP, port))
          if code == 0:
-                 print('Porta Aberta')
+                 print('Porta aberta')
          else:
-                 print('Porta Fechada')
+                 print('Porta fechada')
+
+
+
+
+
